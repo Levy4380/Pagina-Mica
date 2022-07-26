@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import BarraNavegacion from './components/BarraNavegacion';
 import PrimeraPagina from './components/PrimeraPagina';
 import SegundaPagina from './components/SegundaPagina';

@@ -1,9 +1,5 @@
-import {useEffect} from 'react';
-function PrimeraPagina(){
-    useEffect(()=>{
-		document.title='puto'
-	})
 
+function PrimeraPagina(){
             return(
             <div>
                 Hola soy la pagina 1
