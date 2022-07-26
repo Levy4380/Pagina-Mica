@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState, useEffect} from 'react';
+import BarraNavegacion from './components/BarraNavegacion';
+import PrimeraPagina from './components/PrimeraPagina';
+import SegundaPagina from './components/SegundaPagina';
+import TerceraPagina from './components/TerceraPagina';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+function App(props){
+	let [primeraPaginaIsOpen , setPrimeraPaginaIsOpen]= useState(true);
+	let [segundaPaginaIsOpen , setSegundaPaginaIsOpen]= useState(false);
+	let [terceraPaginaIsOpen , setTerceraPaginaIsOpen]= useState(false);
+
+    function abrirPrimeraPagina(){
+        setPrimeraPaginaIsOpen(true);
+		setSegundaPaginaIsOpen(false);
+		setTerceraPaginaIsOpen(false);
+    }
+	function abrirSegundaPagina(){
+		setPrimeraPaginaIsOpen(false);
+		setSegundaPaginaIsOpen(true);
+		setTerceraPaginaIsOpen(false);
+    }
+	function abrirTerceraPagina(){
+		setPrimeraPaginaIsOpen(false);
+		setSegundaPaginaIsOpen(false);
+		setTerceraPaginaIsOpen(true);
+    }
+
+	
+	return(
+		<main>
+		<BarraNavegacion onClickUno={abrirPrimeraPagina} onClickDos={abrirSegundaPagina}
+		onClickTres={abrirTerceraPagina}/>
+		{primeraPaginaIsOpen ? <PrimeraPagina/>:null}
+		{segundaPaginaIsOpen ? <SegundaPagina/>:null}
+		{terceraPaginaIsOpen ? <TerceraPagina/>:null}
+		</main>
+  )
+};
 
 export default App;
