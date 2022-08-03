@@ -1,40 +1,61 @@
+
 import {useState} from 'react';
-import BarraNavegacion from './components/BarraNavegacion';
-import PrimeraPagina from './components/PrimeraPagina';
-import SegundaPagina from './components/SegundaPagina';
-import TerceraPagina from './components/TerceraPagina';
+import React from 'react';
+import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.js';
+import PaginaInicio from './components/PaginaInicio/PaginaInicio.js';
+import SegundaPagina from './components/SegundaPagina/SegundaPagina.js';
+import TerceraPagina from './components/TerceraPagina/TerceraPagina.js';
+import CuartaPagina from './components/CuartaPagina/CuartaPagina.js';
+
 
 function App(props){
-	let [primeraPaginaIsOpen , setPrimeraPaginaIsOpen]= useState(true);
-	let [segundaPaginaIsOpen , setSegundaPaginaIsOpen]= useState(false);
-	let [terceraPaginaIsOpen , setTerceraPaginaIsOpen]= useState(false);
+	let [inicioIsOpen , setInicioIsOpen]= useState(true),
+		[segundaPaginaIsOpen , setSegundaPaginaIsOpen]= useState(false),
+		[terceraPaginaIsOpen , setTerceraPaginaIsOpen]= useState(false),
+		[cuartaPaginaIsOpen , setCuartaPaginaIsOpen]= useState(false);
 
-    function abrirPrimeraPagina(){
-        setPrimeraPaginaIsOpen(true);
+
+    function abrirInicio(){
+        setInicioIsOpen(true);
 		setSegundaPaginaIsOpen(false);
 		setTerceraPaginaIsOpen(false);
+		setCuartaPaginaIsOpen(false);
     }
 	function abrirSegundaPagina(){
-		setPrimeraPaginaIsOpen(false);
+		setInicioIsOpen(false);
 		setSegundaPaginaIsOpen(true);
 		setTerceraPaginaIsOpen(false);
+		setCuartaPaginaIsOpen(false);
     }
 	function abrirTerceraPagina(){
-		setPrimeraPaginaIsOpen(false);
+		setInicioIsOpen(false);
 		setSegundaPaginaIsOpen(false);
 		setTerceraPaginaIsOpen(true);
+		setCuartaPaginaIsOpen(false);
     }
+	function abrirCuartaPagina(){
+		setInicioIsOpen(false);
+		setSegundaPaginaIsOpen(false);
+		setTerceraPaginaIsOpen(false);
+		setCuartaPaginaIsOpen(true);
+	}
 
 	
 	return(
-		<main>
-		<BarraNavegacion onClickUno={abrirPrimeraPagina} onClickDos={abrirSegundaPagina}
-		onClickTres={abrirTerceraPagina}/>
-		{primeraPaginaIsOpen ? <PrimeraPagina/>:null}
-		{segundaPaginaIsOpen ? <SegundaPagina/>:null}
-		{terceraPaginaIsOpen ? <TerceraPagina/>:null}
-		</main>
+		<div className='App'>
+			<header className="header">
+				<BarraNavegacion onClickUno={abrirInicio} onClickDos={abrirSegundaPagina}
+				onClickTres={abrirTerceraPagina} onClickCuatro={abrirCuartaPagina}/>
+			</header>
+			<main className='contenedor-app'>
+				{inicioIsOpen ? <PaginaInicio />:null}
+				{segundaPaginaIsOpen ? <SegundaPagina/>:null}
+				{terceraPaginaIsOpen ? <TerceraPagina/>:null}
+				{cuartaPaginaIsOpen ? <CuartaPagina/>:null}
+			</main>
+		</div>
   )
+  
 };
 
 export default App;

@@ -1,0 +1,56 @@
+.selector-categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 400px;
+    margin-right: 20px;
+    padding: 10px;
+    box-shadow: 0px 2px 10px 2px  rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.categoria:hover{
+    background-color: rgba(201, 199, 199, 0.19);
+    cursor: pointer;
+}
+
+/* Imagenes de fondo */
+#domotica{
+    background-image: url(../../assets/domotica.jpeg);
+    background-position: center;
+}
+
+#electricidad{
+    background-image: url(../../assets/electricidad.jpg);
+    background-position: center;
+}
+
+
+#iluminacion{
+    background-image: url(../../assets/iluminacion.jpeg);
+    background-position: center;
+}
+
+
+.contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor-imagen-categoria{
+    height: 165px;
+    width: 300px;
+    overflow: hidden;
+    margin-top: 5px;
+}
