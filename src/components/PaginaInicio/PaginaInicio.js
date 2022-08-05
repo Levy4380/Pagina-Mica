@@ -1,11 +1,10 @@
-import {useEffect} from 'react';
-import React from 'react';
+import React, {useEffect} from 'react';
 import './PaginaInicio.css';
 import logo from '../../assets/logo.jpeg';
 
 function PaginaInicio(props){
     useEffect(()=>{
-	    document.title='Webpage'
+	    document.title='Inicio - Kob et Lys'
 	});
 
     return(

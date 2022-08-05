@@ -6,7 +6,7 @@ import SelectorCategorias from "../SelectorCategorias/SelectorCategorias";
 
 function TerceraPagina(){
     useEffect(()=>{
-	    document.title='Webpage: Pagina3'
+	    document.title='Productos - Kob et Lys'
 	});
     const [selectorIsVisible,setSelectorIsVisible]=useState(true);
     const [domoticaIsOpen,setDomoticaIsOpen]= useState(false);
