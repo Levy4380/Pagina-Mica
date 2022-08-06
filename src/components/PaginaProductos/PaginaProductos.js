@@ -2,7 +2,7 @@ import React, { useState , useEffect} from "react";
 import './PaginaProductos.css'
 import SelectorCategorias from "../SelectorCategorias/SelectorCategorias";
 import GrillaProductos from "../GrillaProductos/GrillaProductos";
-import InfoProducto from "../ProductCard/ProductCard";
+
 
 
 function PaginaProductos(){

@@ -7,9 +7,9 @@ import './GrillaProductos.css'
 
 function GrillaProductos(props){ 
     let productList;
-    {(props.category === 'domotica')? productList = DomoticaList : productList = productList};
-    {(props.category === 'electricidad')? productList = ElectricidadList: productList = productList};
-    {(props.category === 'iluminacion')? productList = IluminacionList: productList = productList};
+    if(props.category === 'domotica'){productList = DomoticaList};
+    if(props.category === 'electricidad'){ productList = ElectricidadList};
+    if(props.category === 'iluminacion'){productList = IluminacionList};
  
 
 
