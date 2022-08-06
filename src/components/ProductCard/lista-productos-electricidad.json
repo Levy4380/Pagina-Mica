@@ -1,0 +1,54 @@
+[
+    
+        {
+            "id": 1,
+            "nombreProducto":"sdfgh",
+            "marca":"Google"
+        },
+        {
+            "id": 2,
+            "nombreProducto":"Echo Dot 3",
+            "marca":"Amazon"
+        },
+        {
+            "id": 3,
+            "nombreProducto":"Echo Dot 4",
+            "marca":"Amazon"
+        },
+        {
+            "id": 4,
+            "nombreProducto":"Fire TV Stick",
+            "marca":"Amazon"
+        },
+        {
+            "id": 5,
+            "nombreProducto":"Airtag",
+            "marca":"Apple"
+        },
+        {
+            "id": 6,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        },
+        {
+            "id": 7,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        },
+        {
+            "id": 8,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        },
+        {
+            "id": 9,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        },
+        {
+            "id": 10,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        }
+    
+]

@@ -1,10 +1,11 @@
 import React, { useState , useEffect} from "react";
-
-import './TerceraPagina.css'
+import './PaginaProductos.css'
 import SelectorCategorias from "../SelectorCategorias/SelectorCategorias";
+import GrillaProductos from "../GrillaProductos/GrillaProductos";
+import InfoProducto from "../ProductCard/ProductCard";
 
 
-function TerceraPagina(){
+function PaginaProductos(){
     useEffect(()=>{
 	    document.title='Productos - Kob et Lys'
 	});
@@ -24,7 +25,6 @@ function TerceraPagina(){
     }
     function openDomotica(){
         setDomoticaIsOpen(true);
-        console.log('hola')
     }
     function openElectricidad(){
         setElectricidadIsOpen(true);
@@ -35,14 +35,8 @@ function TerceraPagina(){
 
     return(
         <div className="pagina-productos">
-            {selectorIsVisible ? null: <button 
+            {selectorIsVisible ? null: <button className="back-button" 
                 href='#'
-                style={{
-                    position: 'absolute' ,
-                    marginTop:50 +'px',
-                    left:100,
-                    cursor:'pointer'
-                }}
                 onClick={openSelector}>Volver atras</button>}
            
             {selectorIsVisible ? <SelectorCategorias 
@@ -50,13 +44,13 @@ function TerceraPagina(){
                 openDomotica={openDomotica}
                 openElectricidad={openElectricidad}
                 openIluminacion={openIluminacion}/> :null}
-            {domoticaIsOpen ? <h1>Domotica</h1>:null}
-            {electricidadIsOpen ? <h1>Electricidad</h1>:null}
-            {iluminacionIsOpen ? <h1>Iluminacion</h1>:null}
+            {domoticaIsOpen ? <GrillaProductos category='domotica'/>:null}
+            {electricidadIsOpen ? <GrillaProductos category='electricidad'/>:null}
+            {iluminacionIsOpen ? <GrillaProductos category='iluminacion'/>:null}
 
         </div>
 )
 
 };
 
-export default TerceraPagina;
+export default PaginaProductos;

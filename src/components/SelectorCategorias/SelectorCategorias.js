@@ -1,6 +1,6 @@
 import React from "react";
 import Categorias from "../Categorias/Categorias.js";
-
+import './SelectorCategorias.css';
 
 function SelectorCategorias(props){
     

@@ -1,0 +1,23 @@
+.pagina-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.back-button{
+    position: fixed;
+    margin-top: 10px;
+    left: 2%;
+    top: 10%;
+    cursor: pointer;
+    border: 10px;
+    padding: 10px;
+    background:none;
+}
+
+.back-button:hover{
+    background-color: rgba(201, 199, 199, 0.19);
+
+}
+

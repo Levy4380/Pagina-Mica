@@ -7,14 +7,14 @@ function BarraNavegacion(props){
     const [quienesWasClicked, setQuienesWasClicked] = useState(false);
     const [productosWasClicked, setProductosWasClicked] = useState(false);
     const [contactoWasClicked, setContactoWasClicked] = useState(false);
-    function abrirInicio(){
-        props.onClickUno();
+    function clickInicioHadnler(){
+        props.onClickInicio();
         setInicioWasClicked(true);
         setQuienesWasClicked(false);
         setProductosWasClicked(false);
         setContactoWasClicked(false);
     }
-    function abrirQuienes(){
+    function clickQuienesHandler(){
         props.onClickDos();
         setInicioWasClicked(false);
         setQuienesWasClicked(true);
@@ -22,14 +22,14 @@ function BarraNavegacion(props){
         setContactoWasClicked(false);
 
     }
-    function abrirProductos(){
-        props.onClickTres();
+    function clickProductosHandler(){
+        props.onClickProductos();
         setInicioWasClicked(false);
         setQuienesWasClicked(false);
         setProductosWasClicked(true);
         setContactoWasClicked(false);;
         }
-    function abrirContacto(){
+    function clickContactoHandler(){
         props.onClickCuatro();
         setInicioWasClicked(false);
         setQuienesWasClicked(false);
@@ -40,19 +40,19 @@ function BarraNavegacion(props){
 		<nav className="nav">
 			<ul className="nav_menu">
 				<li className={inicioWasClicked ? "nav_menu_item uno":"nav_menu_item uno"}>
-					<button href="#" className="nav_menu_link nav_link" onClick={abrirInicio}>INICIO</button>
+					<button href="#" className="nav_menu_link nav_link" onClick={clickInicioHadnler}>INICIO</button>
 				</li>
 				<li className={quienesWasClicked ? "nav_menu_item dos nav_menu_link_active":"nav_menu_item dos"}>
 					<button href="" className="nav_menu_link nav_link"
-				 onClick={abrirQuienes}>¿QUIENES SOMOS?</button>
+				 onClick={clickQuienesHandler}>¿QUIENES SOMOS?</button>
 				</li>
 				<li className={productosWasClicked ? "nav_menu_item tres nav_menu_link_active":"nav_menu_item tres"}>
 					<button href="" className="nav_menu_link nav_link"
-				 onClick={abrirProductos}>PRODUCTOS</button>
+				 onClick={clickProductosHandler}>PRODUCTOS</button>
 				</li>
                 <li className={contactoWasClicked ? "nav_menu_item cuatro nav_menu_link_active":"nav_menu_item cuatro"}>
 					<button href="" className="nav_menu_link nav_link"
-				 onClick={abrirContacto}>CONTACTO</button>
+				 onClick={clickContactoHandler}>CONTACTO</button>
 				</li>
 			</ul>
       </nav>

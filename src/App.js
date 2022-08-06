@@ -4,39 +4,40 @@ import React from 'react';
 import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.js';
 import PaginaInicio from './components/PaginaInicio/PaginaInicio.js';
 import SegundaPagina from './components/SegundaPagina/SegundaPagina.js';
-import TerceraPagina from './components/TerceraPagina/TerceraPagina.js';
+import PaginaProductos from './components/PaginaProductos/PaginaProductos.js';
 import CuartaPagina from './components/CuartaPagina/CuartaPagina.js';
 
 
+
 function App(props){
-	let [inicioIsOpen , setInicioIsOpen]= useState(true),
+	let [paginaInicioIsOpen , setPaginaInicioIsOpen]= useState(true),
 		[segundaPaginaIsOpen , setSegundaPaginaIsOpen]= useState(false),
-		[terceraPaginaIsOpen , setTerceraPaginaIsOpen]= useState(false),
+		[paginaProductosIsOpen , setPaginaProductosIsOpen]= useState(false),
 		[cuartaPaginaIsOpen , setCuartaPaginaIsOpen]= useState(false);
 
 
-    function abrirInicio(){
-        setInicioIsOpen(true);
+    function openPaginaInicio(){
+        setPaginaInicioIsOpen(true);
 		setSegundaPaginaIsOpen(false);
-		setTerceraPaginaIsOpen(false);
+		setPaginaProductosIsOpen(false);
 		setCuartaPaginaIsOpen(false);
     }
-	function abrirSegundaPagina(){
-		setInicioIsOpen(false);
+	function openSegundaPagina(){
+		setPaginaInicioIsOpen(false);
 		setSegundaPaginaIsOpen(true);
-		setTerceraPaginaIsOpen(false);
+		setPaginaProductosIsOpen(false);
 		setCuartaPaginaIsOpen(false);
     }
-	function abrirTerceraPagina(){
-		setInicioIsOpen(false);
+	function openPaginaProductos(){
+		setPaginaInicioIsOpen(false);
 		setSegundaPaginaIsOpen(false);
-		setTerceraPaginaIsOpen(true);
+		setPaginaProductosIsOpen(true);
 		setCuartaPaginaIsOpen(false);
     }
-	function abrirCuartaPagina(){
-		setInicioIsOpen(false);
+	function openCuartaPagina(){
+		setPaginaInicioIsOpen(false);
 		setSegundaPaginaIsOpen(false);
-		setTerceraPaginaIsOpen(false);
+		setPaginaProductosIsOpen(false);
 		setCuartaPaginaIsOpen(true);
 	}
 
@@ -44,15 +45,17 @@ function App(props){
 	return(
 		<div className='App'>
 			<header className="header">
-				<BarraNavegacion onClickUno={abrirInicio} onClickDos={abrirSegundaPagina}
-				onClickTres={abrirTerceraPagina} onClickCuatro={abrirCuartaPagina}/>
+				<BarraNavegacion onClickInicio={openPaginaInicio} onClickDos={openSegundaPagina}
+				onClickProductos={openPaginaProductos} onClickCuatro={openCuartaPagina}/>
 			</header>
+			<React.StrictMode>
 			<main className='contenedor-app'>
-				{inicioIsOpen ? <PaginaInicio />:null}
+				{paginaInicioIsOpen ? <PaginaInicio />:null}
 				{segundaPaginaIsOpen ? <SegundaPagina/>:null}
-				{terceraPaginaIsOpen ? <TerceraPagina/>:null}
+				{paginaProductosIsOpen ? <PaginaProductos/>:null}
 				{cuartaPaginaIsOpen ? <CuartaPagina/>:null}
 			</main>
+			</React.StrictMode>
 		</div>
   )
   

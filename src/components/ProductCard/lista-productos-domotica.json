@@ -1,0 +1,34 @@
+[
+    
+        {
+            "id": 1,
+            "nombreProducto":"Nest Mini",
+            "marca":"Google"
+        },
+        {
+            "id": 2,
+            "nombreProducto":"Echo Dot 3",
+            "marca":"Amazon"
+        },
+        {
+            "id": 3,
+            "nombreProducto":"Echo Dot 4",
+            "marca":"Amazon"
+        },
+        {
+            "id": 4,
+            "nombreProducto":"Fire TV Stick",
+            "marca":"Amazon"
+        },
+        {
+            "id": 5,
+            "nombreProducto":"Airtag",
+            "marca":"Apple"
+        },
+        {
+            "id": 6,
+            "nombreProducto":"fhdhdr",
+            "marca":"hfddfh"
+        }
+    
+]
