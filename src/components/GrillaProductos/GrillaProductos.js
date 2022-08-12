@@ -7,17 +7,20 @@ import './GrillaProductos.css'
 
 function GrillaProductos(props){ 
     let productList;
-    if(props.category === 'domotica'){productList = DomoticaList};
-    if(props.category === 'electricidad'){ productList = ElectricidadList};
-    if(props.category === 'iluminacion'){productList = IluminacionList};
+    productList = (props.category === 'domotica')? DomoticaList : productList;
+    productList = (props.category === 'electricidad')? ElectricidadList : productList;
+    productList = (props.category === 'iluminacion')? IluminacionList : productList;
+    // if(props.category === 'domotica'){productList = DomoticaList};
+    // if(props.category === 'electricidad'){ productList = ElectricidadList};
+    // if(props.category === 'iluminacion'){productList = IluminacionList};
  
 
 
     const numberOfProducts = productList.length;
     const array=[]
     function repetirDiv(){
-        for (let i = 0; i < numberOfProducts; i++) {
-            array.push(<ProductCard key={i} id={i+1} category={props.category}/>);
+        for (let index = 0; index < numberOfProducts; index++) {
+            array.push(<ProductCard key={index} id={index+1} category={props.category}/>);
             
         }
         return array
