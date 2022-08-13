@@ -9,7 +9,7 @@ function PaginaInicio(props){
 
     return(
         <div className='contenedor-inicio'>
-            <picture><img src={logo} alt=""/></picture>
+            <picture className='imagen-inicio'><img src={logo} alt=""/></picture>
             <div className='texto-inicio'>
                 <h1 className='texto-inicio-titulo'>SOBRE NOSOTROS</h1>
                 <p className='texto-inicio-parrafo'>¡Hola!<br/>

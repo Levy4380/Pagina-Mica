@@ -2,9 +2,74 @@
 /*-------Barra Navegacion-------*/
 /*----------Escritorio----------*/
 
-  .nav{
+.barra-navegacion{
+  width: 100%;
+  height: 60px;
+  box-shadow: 0px 2px 10px 2px  rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.834);
+}
+
+.barra-contenedor-botones{
+  display: inherit;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+}
+.barra-contenedor-boton{
+  display: inherit;
+  margin: 0px 1vw 0px 1vw;
+}
+.barra-contenido-boton{
+  display: inherit;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: min(max(15px, 1vw), 20px);
+}
+
+
+.barra-contenido-boton:hover{
+  text-decoration: underline;
+  box-shadow: 2px 2px 10px 1px  rgba(0, 0, 0, 0.2);
+}
+
+.barra-active{
+  font-size: 19px;
+  box-shadow: 2px 2px 10px 1px  rgba(0, 0, 0, 0.2);
+  background-color: rgba(201, 199, 199, 0.19);
+}
+@media (max-width: 375px){
+  .barra-contenedor-boton{
+    display: inherit;
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* .barra-navegacion{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
     padding: 20px;
     margin:0 auto;
@@ -13,50 +78,49 @@
     position:fixed;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.797);
-  }
-  
-  .nav_menu_link{
-    background: none;
-    height: 45px;
-    border: none;
-  }
-  /*--------------------------------------*/
-  .nav_link {
-    text-decoration: none;
-    padding: 0px 25px;
-    color: rgb(0, 0, 0);
-  }
-  /*--------------------------------------*/
-  .nav_menu{
+    font-size: 18px;
+  } */
+  /*
+  .barra-contenedor-botones{
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding-right: 30px;
+    padding-right: 70px;
   }
-  .nav_menu_item {
-    width: 120px;
+  .barra-contenedor-boton{
+    width: 20%;
     display: flex;
     justify-content: center;
-    font-size: 18px;
     line-height: 80px;
     border-left: 0.5px solid rgba(128, 128, 128, 0.361);
     border-right: 0.5px solid rgba(128, 128, 128, 0.361);
   }
+  
+  .barra-contenido-boton{
+    background: none;
+    height: 45px;
+    font-size: 50%;
+    border: none;
+    text-decoration: none;
+    padding: 0px 25px;
+    color: rgb(0, 0, 0);
+  }
+
   .cuatro{
     border-right: 1px solid rgba(128, 128, 128, 0.361) ;
   }
 
-  .nav_menu_link:hover{
+  .barra-contenido-boton:hover{
     font-size: 19px;
     text-decoration: underline;
     transition: 100ms;
   }
 
-  .nav_menu_link_active{
+  .barra-active{
     font-size: 19px;
     box-shadow: 2px 2px 10px 1px  rgba(0, 0, 0, 0.2);
     background-color: rgba(201, 199, 199, 0.19);
   
   }
-  
+   */

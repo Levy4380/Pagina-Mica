@@ -37,21 +37,21 @@ function BarraNavegacion(props){
         setContactoWasClicked(true);
     }
     return (
-		<nav className="nav">
-			<ul className="nav_menu">
-				<li className={inicioWasClicked ? "nav_menu_item uno":"nav_menu_item uno"}>
-					<button href="#" className="nav_menu_link nav_link" onClick={clickInicioHadnler}>INICIO</button>
+		<nav className="barra-navegacion">
+			<ul className="barra-contenedor-botones">
+				<li className={inicioWasClicked ? "barra-contenedor-boton uno":"barra-contenedor-boton uno"}>
+					<button href="#" className="barra-contenido-boton" onClick={clickInicioHadnler}>INICIO</button>
 				</li>
-				<li className={quienesWasClicked ? "nav_menu_item dos nav_menu_link_active":"nav_menu_item dos"}>
-					<button href="" className="nav_menu_link nav_link"
-				 onClick={clickQuienesHandler}>¿QUIENES SOMOS?</button>
+				<li className={quienesWasClicked ? "barra-contenedor-boton dos barra-active":"barra-contenedor-boton dos"}>
+					<button href="" className="barra-contenido-boton"
+				 onClick={clickQuienesHandler}>SOBRE NOSOTROS</button>
 				</li>
-				<li className={productosWasClicked ? "nav_menu_item tres nav_menu_link_active":"nav_menu_item tres"}>
-					<button href="" className="nav_menu_link nav_link"
+				<li className={productosWasClicked ? "barra-contenedor-boton tres barra-active":"barra-contenedor-boton tres"}>
+					<button href="" className="barra-contenido-boton"
 				 onClick={clickProductosHandler}>PRODUCTOS</button>
 				</li>
-                <li className={contactoWasClicked ? "nav_menu_item cuatro nav_menu_link_active":"nav_menu_item cuatro"}>
-					<button href="" className="nav_menu_link nav_link"
+                <li className={contactoWasClicked ? "barra-contenedor-boton cuatro barra-active":"barra-contenedor-boton cuatro"}>
+					<button href="" className="barra-contenido-boton"
 				 onClick={clickContactoHandler}>CONTACTO</button>
 				</li>
 			</ul>
