@@ -13,7 +13,13 @@ function Categorias(props){
         if(props.origen ==='iluminacion'){
             props.choosedIluminacion()
         };
-    }
+        console.log(document.body.scrollTop);
+        console.log(document.documentElement.scrollTop);
+        function restoreScroll() {
+            document.documentElement.scrollTop = 0;
+        };
+        restoreScroll();
+    };
    
     return (
         <div onClick={chooseCategory} className={'categoria ' + props.origen}>

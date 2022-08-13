@@ -22,6 +22,7 @@ function PaginaProductos(){
         setDomoticaIsOpen(false);
         setElectricidadIsOpen(false);
         setIluminacionIsOpen(false);
+        document.documentElement.scrollTop = 0;
     }
     function openDomotica(){
         setDomoticaIsOpen(true);
