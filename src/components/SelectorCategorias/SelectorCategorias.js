@@ -7,7 +7,7 @@ function SelectorCategorias(props){
 
     return(
     <div className="selector-categorias">
-            <h1 style={{marginTop:100 + 'px'}}>Elegi la categoria que buscas</h1>
+            <h1 className="titulo-categorias">Escoge una categoria</h1>
             <div className='contenedor-categorias'>
                 <Categorias 
                     choosedDomotica={()=>{

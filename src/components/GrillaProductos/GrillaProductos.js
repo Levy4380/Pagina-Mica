@@ -10,10 +10,6 @@ function GrillaProductos(props){
     productList = (props.category === 'domotica')? DomoticaList : productList;
     productList = (props.category === 'electricidad')? ElectricidadList : productList;
     productList = (props.category === 'iluminacion')? IluminacionList : productList;
-    // if(props.category === 'domotica'){productList = DomoticaList};
-    // if(props.category === 'electricidad'){ productList = ElectricidadList};
-    // if(props.category === 'iluminacion'){productList = IluminacionList};
- 
 
 
     const numberOfProducts = productList.length;
