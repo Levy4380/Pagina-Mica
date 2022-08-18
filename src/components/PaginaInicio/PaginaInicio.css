@@ -6,7 +6,7 @@
     flex-direction: column;
 }
 .imagen-inicio{
-    margin-top: calc(300px - 20vw);
+    margin-top: calc(350px - 20vw);
 }
 img{
     width: 100%;
