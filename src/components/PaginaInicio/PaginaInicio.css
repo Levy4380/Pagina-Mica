@@ -5,13 +5,12 @@
     justify-content: center;
     flex-direction: column;
 }
-/* .imagen-inicio{
-    
-} */
+.imagen-inicio{
+    margin-top: calc(200px - 20vw);
+}
 img{
     width: 100%;
     height: 100%;
-    margin-top: 50px;
 }
 .texto-inicio{
     display: flex;

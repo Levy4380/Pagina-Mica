@@ -7,9 +7,9 @@ import './ProductCard.css';
 function ProductCard(props){
     
     let productList;
-    if(props.category === 'domotica'){productList = DomoticaList};
-    if(props.category === 'electricidad'){ productList = ElectricidadList};
-    if(props.category === 'iluminacion'){productList = IluminacionList};
+    productList = (props.category === 'domotica')? DomoticaList : productList;
+    productList = (props.category === 'electricidad')? ElectricidadList : productList;
+    productList = (props.category === 'iluminacion')? IluminacionList : productList;
  
 
     productList.map((info)=>{
@@ -19,7 +19,7 @@ function ProductCard(props){
                 marca:info.marca
         })
     });
-    const product= productList[props.id-1];
+    const product= productList[props.id];
 
     return (
             <div className="producto" onClick={()=>{alert('hola')}}>

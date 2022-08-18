@@ -16,8 +16,7 @@ function GrillaProductos(props){
     const array=[]
     function repetirDiv(){
         for (let index = 0; index < numberOfProducts; index++) {
-            array.push(<ProductCard key={index} id={index+1} category={props.category}/>);
-            
+            array.push(<ProductCard key={index} id={index} category={props.category}/>);
         }
         return array
     }
