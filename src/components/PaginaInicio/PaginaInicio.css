@@ -12,7 +12,7 @@
 }
 img{
     width: 99vw;
-    max-width: 1500px;
+    max-width: 1200px;
     height:max-content;
     z-index: 0;
 }
@@ -42,7 +42,7 @@ img{
 
 @media (min-width: 1200px){
     .imagen-inicio{
-        padding-bottom: calc(500px - 10vw);
+        padding-bottom: calc(300px - 10vw);
 
     }
   }
