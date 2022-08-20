@@ -23,14 +23,14 @@ function PaginaInicio(props){
 
           ], {
             // opciones de sincronización
-            duration: 2500,
+            duration: 1000,
             iterations: 1
           }
           );
           mostrarTexto();
           setTimeout(()=>{
             document.querySelector('img').setAttribute('style','position:absolute;left:0;top:-1000px');
-          },2500);
+          },1000);
                
 
         };

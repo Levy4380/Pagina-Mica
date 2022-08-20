@@ -33,7 +33,7 @@ img{
 
 .down-buton{
     position: absolute;
-    right: 50%;
+    right: calc(50% - 50px);
     top: 85vh;
     background-color: white;
     border: none;
