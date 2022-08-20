@@ -11,6 +11,14 @@ function PaginaInicio(props){
 
     function mostrarTexto(){
         setIsDown(false);
+        let documento = document.getElementsByClassName('contenedor-texto-inicio');
+            documento[0].setAttribute('style', 'visibility:visible')
+    }
+    function sacarTexto(){
+        setIsDown(true);
+        let documento = document.getElementsByClassName('contenedor-texto-inicio');
+            documento[0].setAttribute('style', 'visibility:hidden')
+
     }
 
     useEffect(()=>{
@@ -19,21 +27,43 @@ function PaginaInicio(props){
 
     function animate(){
         document.querySelector("picture").animate([
-            { transform: 'translateY(-1000px)' }
-
+            { transform: 'translateY(-600px)' },
+    
           ], {
             // opciones de sincronización
-            duration: 1000,
+            duration: 900,
             iterations: 1
           }
           );
           mostrarTexto();
           setTimeout(()=>{
-            document.querySelector('img').setAttribute('style','position:absolute;left:0;top:-1000px');
-          },1000);
+            document.querySelector("picture").setAttribute('style','transform:translateY(-600px);z-index:0');
+          },900);
                
 
         };
+        function desAnimate(){
+            
+            document.querySelector("picture").setAttribute('style','transform:translateY(-600px);z-index:1,background:white');
+            
+            
+            document.querySelector("picture").animate([
+                { transform: 'translateY(0px)' },
+              ], {
+                // opciones de sincronización
+                duration: 900,
+                iterations: 1
+              }
+              );
+              setTimeout(()=>{
+                sacarTexto();
+                setTimeout(()=>{document.querySelector("picture").setAttribute('style','transform:translateY(0);');},1)
+                
+              },900);
+              
+                   
+    
+            };
 
     return(
         <div className='contenedor-inicio'>
@@ -55,7 +85,13 @@ function PaginaInicio(props){
             <button className='down-buton' onClick={()=>{
                 animate();
                 mostrarTexto();
-                }}><span class="fa fa-angle-right"></span></button>
+                }}><span className="fa fa-angle-right"></span></button>
+                :null}
+            {!isDown?
+            <button className='up-buton' onClick={()=>{
+                desAnimate();
+                
+                }}><span className="fa fa-angle-right"></span></button>
                 :null}
         </div>
     )
