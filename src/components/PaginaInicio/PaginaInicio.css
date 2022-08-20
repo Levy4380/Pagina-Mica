@@ -9,6 +9,8 @@
     left: 0;
     background-color: white;
     height: 30vh;
+    padding-top: calc(400px - 10vw);
+
 }
 img{
     width: 99vw;
@@ -40,15 +42,15 @@ img{
     color: #868181;
 }
 
-.contenedor-segundo{
+.contenedor-texto-inicio{
     z-index: -1;
     position: absolute;
 
 }
 
-@media (min-width: 1200px){
+/* @media (min-width: 1200px){
     .imagen-inicio{
-        padding-bottom: calc(300px - 10vw);
+        padding-top: calc(300px - 10vw);
 
     }
-  }
+  } */

@@ -39,7 +39,7 @@ function PaginaInicio(props){
         <div className='contenedor-inicio'>
             <picture className='imagen-inicio'>
                 <img src={logo} alt=""/></picture>
-            <div className='contenedor-segundo'>
+            <div className='contenedor-texto-inicio'>
                 {!isDown ?
                 <div className='texto-inicio'>
                     <h1 className='texto-inicio-titulo'>SOBRE NOSOTROS</h1>
