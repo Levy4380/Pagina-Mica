@@ -49,9 +49,9 @@ img{
 
 }
 
-/* @media (min-width: 1200px){
+@media (min-width: 1500px){
     .imagen-inicio{
-        padding-top: calc(300px - 10vw);
+        padding-top: calc(400px - 10vw);
 
     }
-  } */
+  }
