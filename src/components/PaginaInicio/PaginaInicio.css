@@ -22,6 +22,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
 }
 
 .texto-inicio-titulo{
@@ -32,6 +33,11 @@ img{
     position: absolute;
     right: 50%;
     top: 85vh;
+    background-color: white;
+    border: none;
+    transform: rotate(90deg);
+    font-size: 50px;
+    color: #868181;
 }
 
 .contenedor-segundo{

@@ -23,14 +23,14 @@ function PaginaInicio(props){
 
           ], {
             // opciones de sincronización
-            duration: 2000,
+            duration: 2500,
             iterations: 1
           }
           );
           mostrarTexto();
           setTimeout(()=>{
             document.querySelector('img').setAttribute('style','position:absolute;left:0;top:-1000px');
-          },2000);
+          },2500);
                
 
         };
@@ -38,7 +38,6 @@ function PaginaInicio(props){
     return(
         <div className='contenedor-inicio'>
             <picture className='imagen-inicio'>
-            {/* <span></span> */}
                 <img src={logo} alt=""/></picture>
             <div className='contenedor-segundo'>
                 {!isDown ?
@@ -52,10 +51,12 @@ function PaginaInicio(props){
                 </div> 
                 :null}
             </div>
+            {isDown?
             <button className='down-buton' onClick={()=>{
                 animate();
                 mostrarTexto();
-                }}>abajo</button>
+                }}><span class="fa fa-angle-right"></span></button>
+                :null}
         </div>
     )
         
