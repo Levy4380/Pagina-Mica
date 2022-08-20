@@ -4,7 +4,7 @@ import React from 'react';
 import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.js';
 import PaginaInicio from './components/PaginaInicio/PaginaInicio.js';
 import SegundaPagina from './components/SegundaPagina/SegundaPagina.js';
-import PaginaProductos from './components/PaginaProductos/PaginaProductos.js';
+import PaginaProductos from './components/PaginaProductos/PaginaProductos.jsx';
 import CuartaPagina from './components/CuartaPagina/CuartaPagina.js';
 
 

@@ -16,6 +16,9 @@
 }
 header{
   height: 60px;
+  width: 99vw;
+  position: absolute;
+  left: 0;
 }
 
 .barra-contenedor-botones{

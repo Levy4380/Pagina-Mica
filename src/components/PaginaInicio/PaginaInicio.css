@@ -6,12 +6,18 @@
     flex-direction: column;
 }
 .imagen-inicio{
-    margin-top: calc(350px - 25vw);
+    left: 0;
+    background-color: white;
+    padding-bottom: 5px;
+    height: 30vh;
 }
 img{
-    width: 100%;
-    height: 100%;
+    width: 99vw;
+    max-width: 1600px;
+    height:max-content;
+    z-index: 0;
 }
+
 .texto-inicio{
     display: flex;
     flex-direction: column;
@@ -22,3 +28,19 @@ img{
 .texto-inicio-titulo{
     font-size: 5vw;
 }
+
+.down-buton{
+    position: absolute;
+    right: 50%;
+    top: 95vh;
+}
+
+.contenedor-segundo{
+    z-index: -1;
+    position: absolute;
+
+}
+
+@media (max-width: 1px){
+
+  }
