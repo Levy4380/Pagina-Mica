@@ -8,12 +8,11 @@
 .imagen-inicio{
     left: 0;
     background-color: white;
-    padding-bottom: 5px;
     height: 30vh;
 }
 img{
     width: 99vw;
-    max-width: 1600px;
+    max-width: 1500px;
     height:max-content;
     z-index: 0;
 }
@@ -32,7 +31,7 @@ img{
 .down-buton{
     position: absolute;
     right: 50%;
-    top: 80vh;
+    top: 85vh;
 }
 
 .contenedor-segundo{
@@ -41,6 +40,9 @@ img{
 
 }
 
-@media (max-width: 1px){
+@media (min-width: 1200px){
+    .imagen-inicio{
+        padding-bottom: calc(500px - 10vw);
 
+    }
   }
