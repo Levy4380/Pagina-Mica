@@ -71,7 +71,7 @@ function PaginaInicio(props){
                     </div> 
                 </div>}
             
-            {!buttonIsShowed ?
+            {!textIsShowed ?
             <div className='container-down-buton'>
                 <button className='down-buton' onClick={()=>{
                     animate();
