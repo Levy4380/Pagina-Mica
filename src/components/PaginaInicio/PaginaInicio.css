@@ -26,6 +26,14 @@ img{
 
 /* -----------------Texto-------------------- */
 
+.contenedor-texto-inicio{
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    max-width: 600px;
+}
+
 .texto-inicio{
     display: flex;
     flex-direction: column;
@@ -36,13 +44,16 @@ img{
 }
 
 .texto-inicio-titulo{
-    font-size: 5vw;
+    font-size: min(6vw,60px);
+    font-weight: 50;
 }
+ .texto-inicio-parrafo{
+    text-align: justify;
+    font-size:max(1vw,20px);
+    font-weight:0;
+    color: #383838;
+ }
 
-.contenedor-texto-inicio{
-    z-index: 1;
-    position: absolute;
-}
 
 /* ------------------Botones------------------- */
 
