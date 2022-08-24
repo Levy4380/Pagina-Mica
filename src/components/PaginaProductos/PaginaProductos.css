@@ -3,9 +3,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 70px;
-
-    
+    /* margin-top: 70px; */
 }
 
 .back-button{
@@ -24,3 +22,8 @@
 
 }
 
+
+@media (max-width: 1150px){
+
+    
+}

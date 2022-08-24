@@ -22,7 +22,7 @@ function PaginaInicio(props){
 
     function animate(){
         document.querySelector("picture").animate([
-            { transform: 'translateY(-600px)' },
+            { transform: 'translateY(-800px)' },
     
           ], {
             // opciones de sincronización
@@ -32,7 +32,7 @@ function PaginaInicio(props){
           );
           mostrarTexto();
           setTimeout(()=>{
-            document.querySelector("picture").setAttribute('style','transform:translateY(-600px)');
+            document.querySelector("picture").setAttribute('style','transform:translateY(-800px)');
             setButtonIsShowed(true);
           },850);
                
@@ -50,7 +50,7 @@ function PaginaInicio(props){
               );
               setTimeout(()=>{
                 sacarTexto();
-                document.querySelector("picture").setAttribute('style','transform:translateY(0);');
+                document.querySelector("picture").setAttribute('style','transform:translateY(0px);');
               },880);
             };
 

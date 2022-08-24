@@ -11,6 +11,8 @@
 
 .imagen-inicio{
     left: 0;
+    position: absolute;
+    transform: translateY(0px);
     width: 100vw;
     background-color: white;
     height: 70vh;
@@ -24,15 +26,15 @@ img{
     width: 99vw;
     max-width: 1000px;
     height:max-content;
-    padding: calc(300px - 10vw) 0 0 0 /*calc(100px + 1vw) 0px calc(100px + 1vw)*/;
+    padding: calc(200px - 10vw) 0 0 0 /*calc(100px + 1vw) 0px calc(100px + 1vw)*/;
 }
 
 /* -----------------Texto-------------------- */
 
 .contenedor-texto-inicio{
     z-index: 1;
-    position: absolute;
-    top: 20vh;
+    /* position: absolute; */
+    /* top: 20vh; */
     width: 60vw;
     max-width: 1100px;
     padding: 60px;
@@ -105,7 +107,7 @@ img{
 
 @media (min-width: 1500px){
     img{
-        padding: calc(400px - 10vw) calc(300px - 10vw) 0px calc(300px - 10vw);
+        padding: calc(300px - 10vw) calc(300px - 10vw) 0px calc(300px - 10vw);
 
     }
   }
