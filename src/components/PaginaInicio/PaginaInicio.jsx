@@ -7,18 +7,13 @@ import logo from '../../assets/logo3.jpeg';
 
 function PaginaInicio(props){
     const [isDown,setIsDown]= useState(true);
-
+    const [dButtonIsShowed, setDButtonIsShowed]=useState(false)
 
     function mostrarTexto(){
         setIsDown(false);
-        let documento = document.getElementsByClassName('contenedor-texto-inicio');
-            documento[0].setAttribute('style', 'visibility:visible')
     }
     function sacarTexto(){
         setIsDown(true);
-        let documento = document.getElementsByClassName('contenedor-texto-inicio');
-            documento[0].setAttribute('style', 'visibility:hidden')
-
     }
 
     useEffect(()=>{
@@ -37,16 +32,14 @@ function PaginaInicio(props){
           );
           mostrarTexto();
           setTimeout(()=>{
-            document.querySelector("picture").setAttribute('style','transform:translateY(-600px);z-index:0');
-          },900);
+            document.querySelector("picture").setAttribute('style','transform:translateY(-600px);background:white');
+            setDButtonIsShowed(true);
+          },899);
                
 
         };
         function desAnimate(){
-            
-            document.querySelector("picture").setAttribute('style','transform:translateY(-600px);z-index:1,background:white');
-            
-            
+            setDButtonIsShowed(false);
             document.querySelector("picture").animate([
                 { transform: 'translateY(0px)' },
               ], {
@@ -57,12 +50,8 @@ function PaginaInicio(props){
               );
               setTimeout(()=>{
                 sacarTexto();
-                setTimeout(()=>{document.querySelector("picture").setAttribute('style','transform:translateY(0);');},1)
-                
-              },900);
-              
-                   
-    
+                document.querySelector("picture").setAttribute('style','transform:translateY(0);');
+              },850);
             };
 
     return(
@@ -70,7 +59,7 @@ function PaginaInicio(props){
             <picture className='imagen-inicio'>
                 <img src={logo} alt=""/></picture>
             <div className='contenedor-texto-inicio'>
-                {!isDown ?
+                {isDown ? null:
                 <div className='texto-inicio'>
                     <h1 className='texto-inicio-titulo'>SOBRE NOSOTROS</h1>
                     <p className='texto-inicio-parrafo'>¡Hola!<br/>
@@ -78,21 +67,23 @@ function PaginaInicio(props){
                         Somos un emprendimiento familiar y queremos brindarte todos los productos para darle un estilo único y personal a tu hogar.<br/>
                         Sabemos que la calidad de vida que te mereces ¡es posible! y por eso hacemos que tu casa trabaje con vos, contamos con productos inteligentes para hacer tu día a día y el de tus afectos más fácil y seguro.<br/>
                         ¡Animate a vivir la experiencia!</p>
-                </div> 
-                :null}
+                </div> }
             </div>
             {isDown?
-            <button className='down-buton' onClick={()=>{
-                animate();
-                mostrarTexto();
-                }}><span className="fa fa-angle-right"></span></button>
-                :null}
-            {!isDown?
-            <button className='up-buton' onClick={()=>{
-                desAnimate();
-                
-                }}><span className="fa fa-angle-right"></span></button>
-                :null}
+            <div className='container-down-buton'>
+                <button className='down-buton' onClick={()=>{
+                    animate();
+                    mostrarTexto();
+                    }}><span className="fa fa-angle-right"></span>
+                </button>
+            </div> :null}
+            {dButtonIsShowed ?  
+            <div className='container-up-buton'>
+                <button className='up-buton' onClick={()=>{
+                    desAnimate();
+                    }}><span className="fa fa-angle-right"></span>
+                </button>
+            </div>:null}
         </div>
     )
         

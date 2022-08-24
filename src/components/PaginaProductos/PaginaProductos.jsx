@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from "react";
 import './PaginaProductos.css'
-import SelectorCategorias from "../SelectorCategorias/SelectorCategorias";
+import SelectorCategorias from "../SelectorCategorias/SelectorCategorias.jsx";
 import GrillaProductos from "../GrillaProductos/GrillaProductos";
 
 

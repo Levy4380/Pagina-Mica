@@ -1,11 +1,11 @@
 
 import {useState} from 'react';
 import React from 'react';
-import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.js';
-import PaginaInicio from './components/PaginaInicio/PaginaInicio.js';
-import SegundaPagina from './components/SegundaPagina/SegundaPagina.js';
+import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.jsx';
+import PaginaInicio from './components/PaginaInicio/PaginaInicio.jsx';
+import SegundaPagina from './components/SegundaPagina/SegundaPagina.jsx';
 import PaginaProductos from './components/PaginaProductos/PaginaProductos.jsx';
-import CuartaPagina from './components/CuartaPagina/CuartaPagina.js';
+import CuartaPagina from './components/CuartaPagina/CuartaPagina.jsx';
 import '../src/App.css';
 
 
