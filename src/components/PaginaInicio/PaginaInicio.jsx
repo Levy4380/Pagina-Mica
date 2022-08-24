@@ -51,7 +51,7 @@ function PaginaInicio(props){
               setTimeout(()=>{
                 sacarTexto();
                 document.querySelector("picture").setAttribute('style','transform:translateY(0);');
-              },850);
+              },880);
             };
 
     return(
