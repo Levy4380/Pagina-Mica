@@ -44,7 +44,7 @@ img{
 }
 
 .texto-inicio-titulo{
-    font-size: min(6vw,60px);
+    font-size: max(1vw,(min(6vw,60px)));
     font-weight: 50;
 }
  .texto-inicio-parrafo{
