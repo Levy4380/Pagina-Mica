@@ -1,12 +1,26 @@
 .App{
     display: flex;
+    flex-direction:column ;
     width: 100vw;
     height: 90vh;
     justify-content: center;
     align-items: center;
 }
+
+/* ------------------------------------ */
+
+header{
+    height: 60px;
+    width: 99vw;
+    left: 0;
+    top: 0;
+}
+
+/* ------------------------------------ */
+
 .contenedor-app{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: calc(99vh - 60px);
 }

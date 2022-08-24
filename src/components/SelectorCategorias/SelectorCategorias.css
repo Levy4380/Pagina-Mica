@@ -1,3 +1,15 @@
+/* --------------Selector---------------- */
+.selector-categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-categorias{
+    text-align: center;
+}
+/* -------------------------------------- */
 .contenedor-categorias{
     display: flex;
     flex-wrap: wrap;
@@ -8,6 +20,4 @@
     height: 60vh;
 }
 
-.titulo-categorias{
-    text-align: center;
-}
+

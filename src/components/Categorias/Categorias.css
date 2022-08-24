@@ -1,9 +1,4 @@
-.selector-categorias{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+/* ------------------------------ */
 .categoria{
     display: flex;
     flex-direction: column;
@@ -23,7 +18,7 @@
     cursor: pointer;
 }
 
-/* Imagenes de fondo */
+/* --------------Imagenes de fondo-------------- */
 #domotica{
     background-image: url(../../assets/domotica.jpeg);
     background-position: center;
@@ -34,12 +29,12 @@
     background-position: center;
 }
 
-
 #iluminacion{
     background-image: url(../../assets/iluminacion.jpeg);
     background-position: center;
 }
 
+/* --------------Formato del texto-------------- */
 
 .contenedor-texto{
     display: flex;

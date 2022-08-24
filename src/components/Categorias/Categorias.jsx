@@ -3,6 +3,10 @@ import './Categorias.css';
 
 
 function Categorias(props){
+    function restoreScroll() {
+        document.documentElement.scrollTop = 0;
+    };
+
     function chooseCategory(){
         if(props.origen ==='domotica'){
             props.choosedDomotica();
@@ -12,11 +16,6 @@ function Categorias(props){
         };
         if(props.origen ==='iluminacion'){
             props.choosedIluminacion()
-        };
-        console.log(document.body.scrollTop);
-        console.log(document.documentElement.scrollTop);
-        function restoreScroll() {
-            document.documentElement.scrollTop = 0;
         };
         restoreScroll();
     };

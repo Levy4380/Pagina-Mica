@@ -1,10 +1,12 @@
 .pagina-productos{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    /* margin-top: 70px; */
+    height: 90%;
 }
+
+/* -------------Back button-------------------- */
 
 .back-button{
     position: fixed;
@@ -21,12 +23,4 @@
 
 .back-button:hover{
     background-color: rgba(201, 199, 199, 0.19);
-
-
-}
-
-
-@media (max-width: 1150px){
-
-    
 }
