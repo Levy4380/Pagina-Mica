@@ -26,7 +26,7 @@ img{
     width: 99vw;
     max-width: 1000px;
     height:max-content;
-    padding: calc(200px - 10vw) 0 0 0 /*calc(100px + 1vw) 0px calc(100px + 1vw)*/;
+    padding: calc(300px - 15vw) 0 0 0 /*calc(100px + 1vw) 0px calc(100px + 1vw)*/;
 }
 
 /* -----------------Texto-------------------- */
@@ -107,7 +107,7 @@ img{
 
 @media (min-width: 1500px){
     img{
-        padding: calc(300px - 10vw) calc(300px - 10vw) 0px calc(300px - 10vw);
+        padding: calc(300px - 8vw) calc(300px - 10vw) 0px calc(300px - 10vw);
 
     }
   }
