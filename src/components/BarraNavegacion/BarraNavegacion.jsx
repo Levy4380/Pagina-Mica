@@ -4,20 +4,20 @@ import {useState} from 'react';
 
 function BarraNavegacion(props){
     const [inicioWasClicked, setInicioWasClicked] = useState(false);
-    const [quienesWasClicked, setQuienesWasClicked] = useState(false);
+    const [beneficiosWasClicked, setBeneficiosWasClicked] = useState(false);
     const [productosWasClicked, setProductosWasClicked] = useState(false);
     const [contactoWasClicked, setContactoWasClicked] = useState(false);
     function clickInicioHadnler(){
         props.onClickInicio();
         setInicioWasClicked(true);
-        setQuienesWasClicked(false);
+        setBeneficiosWasClicked(false);
         setProductosWasClicked(false);
         setContactoWasClicked(false);
     }
-    function clickQuienesHandler(){
+    function clickBeneficiosHandler(){
         props.onClickDos();
         setInicioWasClicked(false);
-        setQuienesWasClicked(true);
+        setBeneficiosWasClicked(true);
         setProductosWasClicked(false);
         setContactoWasClicked(false);
 
@@ -25,26 +25,26 @@ function BarraNavegacion(props){
     function clickProductosHandler(){
         props.onClickProductos();
         setInicioWasClicked(false);
-        setQuienesWasClicked(false);
+        setBeneficiosWasClicked(false);
         setProductosWasClicked(true);
         setContactoWasClicked(false);;
         }
     function clickContactoHandler(){
         props.onClickCuatro();
         setInicioWasClicked(false);
-        setQuienesWasClicked(false);
+        setBeneficiosWasClicked(false);
         setProductosWasClicked(false);
         setContactoWasClicked(true);
     }
     return (
 		<nav className="barra-navegacion">
 			<ul className="barra-contenedor-botones">
-				<li className={inicioWasClicked ? "barra-contenedor-boton uno":"barra-contenedor-boton uno"}>
+				<li className={inicioWasClicked ? "barra-contenedor-boton uno barra-active":"barra-contenedor-boton uno"}>
 					<button href="#" className="barra-contenido-boton" onClick={clickInicioHadnler}>INICIO</button>
 				</li>
-				<li className={quienesWasClicked ? "barra-contenedor-boton dos barra-active":"barra-contenedor-boton dos"}>
+				<li className={beneficiosWasClicked ? "barra-contenedor-boton dos barra-active":"barra-contenedor-boton dos"}>
 					<button href="" className="barra-contenido-boton"
-				 onClick={clickQuienesHandler}>SOBRE NOSOTROS</button>
+				 onClick={clickBeneficiosHandler}>AUTOMATIZA TU CASA</button>
 				</li>
 				<li className={productosWasClicked ? "barra-contenedor-boton tres barra-active":"barra-contenedor-boton tres"}>
 					<button href="" className="barra-contenido-boton"

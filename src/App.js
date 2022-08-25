@@ -1,5 +1,5 @@
 
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import React from 'react';
 import BarraNavegacion from './components/BarraNavegacion/BarraNavegacion.jsx';
 import PaginaInicio from './components/PaginaInicio/PaginaInicio.jsx';
@@ -15,6 +15,7 @@ function App(props){
 		[segundaPaginaIsOpen , setSegundaPaginaIsOpen]= useState(false),
 		[paginaProductosIsOpen , setPaginaProductosIsOpen]= useState(false),
 		[cuartaPaginaIsOpen , setCuartaPaginaIsOpen]= useState(false);
+
 
 
     function openPaginaInicio(){

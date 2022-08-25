@@ -27,13 +27,18 @@
         },
         {
             "id": 6,
-            "nombreProducto":"Tu mama",
-            "marca":"Super puta"
+            "nombreProducto":"Chromecast",
+            "marca":"Google"
         },
         {
             "id": 7,
-            "nombreProducto":"Tu madfhdsjkfhma",
-            "marca":"Super puta"
+            "nombreProducto":"Mi Home Security ",
+            "marca":"Xiaomi"
+        },
+        {
+            "id": 8,
+            "nombreProducto":"My Body Composition scale 2",
+            "marca":"Xiaomi"
         }
-    
+        
 ]

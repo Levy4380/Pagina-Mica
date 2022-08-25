@@ -61,7 +61,7 @@ function PaginaInicio(props){
                 {!textIsShowed ? null:
                 <div className='contenedor-texto-inicio'>
                     <div className='texto-inicio'>
-                        <h1 className='texto-inicio-titulo'>SOBRE NOSOTROS</h1>
+                        <h1 className='texto-inicio-titulo'>Tienda de domótica e iluminación</h1>
                         <p className='texto-inicio-parrafo'>
                             <b>¡Hola!</b><br/> 
                             Bienvenidos a <b>Kob et Lys</b> y gracias por acompañarnos!<br/>
