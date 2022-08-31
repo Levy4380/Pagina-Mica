@@ -8,7 +8,7 @@ function SegundaPagina(){
 	})
 
             return(
-                <div className='contenedor-segundo'>
+                <div className='contenedor-texto-inicio'>
                     <div className='texto-inicio'>
                         <h1 className='texto-inicio-titulo'>SOBRE NOSOTROS</h1>
                         <p className='texto-inicio-parrafo'>¡Hola!<br/>
