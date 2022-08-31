@@ -4,7 +4,7 @@ import '../SegundaPagina/SegundaPagina.css';
 
 function SegundaPagina(){
     useEffect(()=>{
-	    document.title='Webpage: Pagina2'
+	    document.title='Sobre nosotros - Kob et lys'
 	})
 
             return(
