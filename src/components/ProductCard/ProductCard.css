@@ -12,11 +12,11 @@
 
 .imagen-producto{
     width: 10vw;
-    max-width: 175px;
-    min-width: 1630px;
+    min-width: 175px;
+    max-width: 1630px;
     height: 10vw;
-    max-height: 175px;
-    min-height: 160px;
+    min-height: 175px;
+    max-height: 160px;
     background-color: rgba(0, 0, 255, 0.39);
     border-radius: 50%;
 }
